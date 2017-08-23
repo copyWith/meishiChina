@@ -1,0 +1,267 @@
+.k_max{
+    width: 100%;
+    height: 100%;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.clear{
+    clear: both;
+}
+/*导航的开始*/
+#k_navlist{
+    float: right;
+    margin-left:250px;
+    position: relative;
+}
+#k_navlist .navlist_a {
+    padding: 0 10px;
+    color: #333;
+}
+#k_navlist_sub h4 {
+    padding: 15px 0 0 0;
+    width: 100%;
+    font-weight: 700;
+    clear: both;
+}
+#k_navlist_sub {
+    background: green;
+    width: 990px;
+    position: absolute;
+    right: 0;
+    top:35px;
+    z-index: 50;
+    display: none;
+    box-shadow: 0 2px 3px #ddd;
+    overflow: hidden;
+}
+#k_navlist_sub div{
+    float: left;
+    width: 18%;
+    height: auto;
+}
+#k_navlist_sub ul {
+    float: left;
+    margin: 0 0 10px;
+}
+#k_navlist_sub li a {
+    color: #333;
+    font-size: 12px;
+    line-height: 28px;
+    height: 28px;
+}
+#k_navlist_sub li {
+    line-height: 160%;
+    width:47%;
+    padding: 0;
+}
+#k_navlist .k_navlist_a b {
+    top: 13px;
+    border-top: 6px solid #fff;
+}
+#k_navlist .k_navlist_a b, #k_navlist .k_navlist_a i {
+    position: absolute;
+    top: 15px;
+    right: 6px;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    border: 4px dashed transparent;
+    border-top: 6px solid #333;
+}
+/*导航的结束*/
+/*轮播的开始*/
+.m_lun{
+    width:990px;
+    height:224px;
+    margin-top:20px;
+    overflow: hidden;
+    position: relative;
+}
+.m_lun>ul{
+    width:4940px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.m_lun>ul>li{
+    float: left;
+    width:990px;
+    height:225px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 44px;
+}
+.m_lun>ul>li>div {
+    width: 300px;
+    overflow: hidden;
+}
+.m_lun>ul>li>div>a>img{
+    width:100%;
+    height: 225px;
+}
+.m_lun>ul>li>div>a>img:hover{
+    transition:1s;
+    transform:scale(1.5);
+}
+.prev,.next{
+    position: absolute;
+    top:50%;
+    width: 30px;
+    height: 50px;
+    margin-top: -30px;
+    background-color: rgba(0,0,0,.5);
+    color:white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.prev{
+    left: 5px;
+}
+.next{
+    right: 5px;
+}
+.m_lunbo_cover{
+    position: absolute;
+    top:0;
+    left:0;
+    width:300px;
+    height:225px;
+    background-color: rgba(0,0,0,.02);
+    text-align: center;
+    color:white;
+    font-size: 18px;
+}
+.m_lunbo_cover>p{
+    margin:90px auto;
+}
+/*轮播的结束*/
+/*轮播的开始*/
+.k_lb{
+    width: 990px;
+    height:225px;
+    margin:15px auto;
+}
+/*轮播的结束*/
+/*内容导航的开始*/
+.k_con_nav{
+    width: 990px;
+    height: auto;
+    margin:0 auto;
+}
+.k_infoation{
+    float: left;
+    width: 640px;
+}
+#k_zhen_info{
+    width: 640px;
+    height: 41px;
+    border-bottom: 1px solid #ccc;
+}
+.k_ui_title_wrap h3{
+    float: left;
+    font-size: 20px;
+}
+.k_ui_title_wrap h3 a{
+    color: #666;
+    display: block;
+    width: 80px;
+    height: 26px;
+    margin-right:16px;
+}
+/*内容导航的结束*/
+/*内容的开始*/
+.k_content_con{
+    width: 640px;
+    height: 140px;
+    margin-top: 20px;
+}
+.k_img{
+    float: left;
+}
+.k_img img{
+    width: 160px;
+    height: 120px;
+}
+.k_eat{
+    float:left;
+    width:450px;
+    margin-left: 20px;
+}
+.k_eat h3{
+    font-size: 20px;
+    color: #333;
+}
+.k_eat span{
+    font-size:12px;
+    color: #999;
+    margin-top: 10px;
+    display: block;
+}
+.k_eat p{
+    font-size:14px;
+    color: #666;
+    margin-top: 5px;
+    line-height:20px;
+}
+/*内容的结束*/
+/*侧边栏内容的开始*/
+.k_week{
+    float: right;
+    width:300px;
+}
+.k_week_nav p{
+    font-weight: 400;
+    font-size: 25px;
+    color: #ff6767;
+    border-bottom: 3px solid #ff6767;
+}
+.k_week_play{
+    width: 300px;
+    height: 80px;
+    float: left;
+    margin-top:15px;
+}
+.k_week_pic{
+    float: left;
+}
+.k_week_con{
+    float:left;
+    margin-left:16px;
+}
+.k_week_con p{
+    font-size: 14px;
+    color: #333;
+}
+.k_week_con span{
+    font-size: 12px;
+    color: #999;
+}
+.k_week_pic img{
+    width: 100px;
+    height: 80px;
+}
+/*侧边栏内容的结束*/
+.nav_wrap{
+    width: 990px;
+    overflow: hidden;
+}
+.k_big_navtion{
+    width: 2970px;
+}
+.tabCon{
+    float: left;
+}
+.k_secal{
+    overflow: hidden;
+}
+.k_secal img:hover{
+    transition: 0.7s;
+    transform: scale(1.4);
+}
