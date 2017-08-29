@@ -30,10 +30,11 @@ onload = function () {
     }
     goTop();
 
-    var hMain=document.querySelector('.h_main');
-    var mainUl=hMain.querySelectorAll('ul');
-    var navLi=document.querySelectorAll('.nav_wrap a');
-    for(let i=0;i<navLi.length;i++){
+    var hMain=document.getElementsByClassName('h_main')[0];
+    var mainUl=hMain.getElementsByTagName('ul');
+    var navWrap=document.getElementsByClassName('nav_wrap')[0];
+    var navLi=navWrap.getElementsByTagName('a');
+    for(var i=0;i<navLi.length;i++){
         navLi[i].index = i;
         navLi[i].onclick= function () {
             for(var i=0;i<navLi.length;i++){

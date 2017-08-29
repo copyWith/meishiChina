@@ -1,11 +1,11 @@
 onload = function () {
-    pullDown(".h_pull", ".h_pull_down");
-    pullDown(".h_bar_text", ".h_pull_down");
-    pullDown(".h_blo", ".h_pull_down");
-    pullDown(".h_blo_pull", ".h_pull_down");
+    pullDown("h_pull", "h_pull_down");
+    pullDown("h_bar_text", "h_pull_down");
+    pullDown("h_blo", "h_pull_down");
+    pullDown("h_blo_pull", "h_pull_down");
     function pullDown(f, z) {
-        var pull = document.querySelector(f);
-        var pullDown = pull.querySelector(z);
+        var pull = document.getElementsByClassName(f)[0];
+        var pullDown = pull.getElementsByClassName(z)[0];
         pull.onmouseover = function () {
             pullDown.style.display = "block";
         };
@@ -14,8 +14,8 @@ onload = function () {
         };
     }
 
-    var dbParent = document.querySelector('.h_advertise');
-    var db = dbParent.querySelectorAll('.h_db');
+    var dbParent = document.getElementsByClassName('h_advertise')[0];
+    var db = dbParent.getElementsByClassName('h_db');
     dbParent.onmouseover = function () {
         for (var i = 0; i < db.length; i++) {
             db[i].style.display = "block"
@@ -26,25 +26,30 @@ onload = function () {
             db[i].style.display = "none"
         }
     };
-    var tabLi = document.querySelectorAll('.h_tab > ul > li');
-    for (let i = 0; i < tabLi.length; i++) {
+    var tabUl = document.getElementsByClassName('h_tab_ul')[0];
+    var tabLi = tabUl.getElementsByClassName('h_tab_li');
+    for (var i = 0; i < tabLi.length; i++) {
+        tabLi[i].index = i;
         tabLi[i].onmouseover = function () {
-            var tabMain = tabLi[i].querySelector('ul');
+            var tabMain = tabLi[this.index].getElementsByTagName('ul')[0];
             tabMain.style.display = "block"
         };
         tabLi[i].onmouseout = function () {
-            var tabMain = tabLi[i].querySelector('ul');
+            var tabMain = tabLi[this.index].getElementsByTagName('ul')[0];
             tabMain.style.display = "none"
         };
     }
-    tab('.h_live > div:first-of-type');
-    tab('.h_live > div:nth-of-type(2)');
-    tab('.h_menu');
-    tab('.h_topic');
+    tab('ah_live_fi');
+    tab('ah_live_tw');
+    tab('h_menu');
+    tab('h_topic');
     function tab(tp) {
-        var tParent = document.querySelector(tp);
-        var tit = tParent.querySelectorAll('.h_tit .le a');
-        var titDiv = tParent.querySelectorAll('.h_live_main > div');
+        var tParent = document.getElementsByClassName(tp)[0];
+        var hTit=tParent.getElementsByClassName('h_tit')[0];
+        var hLe=hTit.getElementsByClassName('le')[0];
+        var tit=hLe.getElementsByTagName('a');
+        var hMain=tParent.getElementsByClassName('h_live_main')[0];
+        var titDiv=hMain.getElementsByClassName('h_live_main_w');
         for (var i = 0; i < tit.length; i++) {
             tit[i].index = i;
             tit[i].onclick = function () {
@@ -68,11 +73,10 @@ onload = function () {
         }else{
             $("#goTop").css('bottom','10px');
         }
-    };window.onscroll = function(){
+    };
+    window.onscroll = function(){
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         var scrollHeight = document.body.scrollHeight || document.documentElement.scrollHeight;
-
-        console.log(scrollTop,scrollHeight,innerHeight);
 
         if(scrollHeight - scrollTop < innerHeight + 50){
             $("#goTop").css('bottom','70px');
@@ -99,18 +103,18 @@ onload = function () {
     }
     goTop();
 
-    var advertise = document.querySelector(".h_advertise_main");
-    var aUl = advertise.querySelector("ul");
-    var aLl = aUl.querySelectorAll("li");
-    var hSolid = document.querySelectorAll(".h_db");
-    var i = 20, lastNum = 0, timer, flag = true, imgNum = 0;
+    var advertise = document.getElementsByClassName("h_advertise_main")[0];
+    var aUl = advertise.getElementsByTagName("ul")[0];
+    var aLl = aUl.getElementsByTagName("li");
+    var hSolid = document.getElementsByClassName("h_db");
+    var i = 20, lastNum = 0, timer, flags = true, imgNums = 0;
 
     function animate(dis) {
         var every = dis / i;
         timer = setInterval(function () {
             if (lastNum >= i) {
                 clearInterval(timer);
-                flag = true;
+                flags = true;
                 lastNum = 0;
                 return;
             }
@@ -121,37 +125,36 @@ onload = function () {
     }
 
     hSolid[0].onclick = function () {
-        if (flag) {
-            flag = false;
-            if (imgNum <= 0) {
+        if (flags) {
+            flags = false;
+            if (imgNums <= 0) {
                 aUl.style.left = -parseFloat(getComputedStyle(aUl).width) + 910 + 'px';
-                imgNum = aLl.length - 1;
+                imgNums = aLl.length - 1;
             }
             animate(910);
-            console.log(parseFloat(getComputedStyle(aUl).left))
+            imgNums--;
         }
-        imgNum--;
     };
     hSolid[1].onclick = function () {
-        if (flag) {
-            flag = false;
-            if (imgNum >= aLl.length - 1) {
+        if (flags) {
+            flags = false;
+            if (imgNums >= aLl.length - 1) {
                 aUl.style.left = '0px';
-                imgNum = 0;
+                imgNums = 0;
             }
             animate(-910);
+            imgNums++;
         }
-        imgNum++;
     };
 
 
-    var fade = document.querySelector('.h_banner'),
-        lb = document.querySelector('.h_banner > ul'),
-        li = lb.querySelectorAll('li'),
-        le = document.querySelector('.h_banner_main > a:first-of-type'),
-        ri = document.querySelector('.h_banner_main > a:last-of-type'),
-        dot = document.querySelector('.h_banner_main > ul'),
-        dotLi = dot.querySelectorAll('li'),
+    var fade = document.getElementsByClassName('h_banner')[0],
+        lb = fade.getElementsByClassName('h_banner_con')[0],
+        li = lb.getElementsByTagName('li'),
+        le = document.getElementsByClassName('h_ban')[0],
+        ri = document.getElementsByClassName('h_ban')[1],
+        dot = document.getElementsByClassName('h_banner_main_ul')[0],
+        dotLi = dot.getElementsByTagName('li'),
         imgNum = 0,//图片计数器
         fadeOutTimer, fadeInTimer, autoPlayTimer,//淡出定时器,淡入定时器
         flag = true,
