@@ -1,6 +1,6 @@
 //var mainDiv=document.querySelectorAll('.y_Con');
 var navA=document.querySelectorAll('.y_logo .y_logo_nav a');
-for(let i=0;i<navA.length;i++){
+for(var i=0;i<navA.length;i++){
     navA[i].index = i;
     navA[i].onclick= function () {
         for(var i=0;i<navA.length;i++){
@@ -16,7 +16,7 @@ for(let i=0;i<navA.length;i++){
 
 var mainUl=document.querySelectorAll('.y_conT');
 var navLi=document.querySelectorAll('.y_nav_wrap a');
-for(let j=0;j<navLi.length;j++){
+for(var j=0;j<navLi.length;j++){
     navLi[j].index = j;
     navLi[j].onclick= function () {
         for(var j=0;j<navLi.length;j++){

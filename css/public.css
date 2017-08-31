@@ -19,8 +19,8 @@
     height: 40px;
     line-height: 40px;
     padding: 0 10px;
+    color: #f1f1f1;
     font-size: 14px;
-    color: #ccc;
 }
 .h_header_ri > ul .h_bar_text a,.h_header_ri > ul .h_blo a{
     padding: 0;
@@ -76,7 +76,6 @@
 }
 
 .h_pull ul li {
-    font-size: 14px;
     color: #ccc;
     height: 40px;
     line-height: 40px;
@@ -121,7 +120,6 @@
 }
 
 .h_bar_text .h_pull_down li {
-    font-size: 10px;
     text-align: center;
     height: 40px;
     position: relative;
