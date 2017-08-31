@@ -4,6 +4,9 @@
     height:90px;
     margin:13px auto ;
 }
+.nav_wrap a{
+    color: #666;
+}
 .k_inprotcontent{
     width:990px;
     margin: 0 auto;
