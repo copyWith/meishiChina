@@ -237,6 +237,9 @@ h6>a{
     /*padding: 16px;*/
     margin-top: 20px;
 }
+.m_img {
+    margin-right: 18px;
+}
 .m_img>a{
     display: inline-block;
     width:180px;

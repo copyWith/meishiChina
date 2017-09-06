@@ -391,7 +391,6 @@
 
 .h_live_main_f ul li a {
     color: #333;
-    margin-top: 10px;
 }
 
 .h_live .h_live_main_f ul li a:before {
@@ -535,7 +534,7 @@
 }
 
 .h_topic .h_live_main_f ul li {
-    padding-top: 10px;
+    padding: 10px 0;
     width: 460px;
     float: left;
     height: 225px;
@@ -548,6 +547,10 @@
 
 .h_topic .h_live_main {
     float: left;
+}
+.h_user{
+    height: 40px;
+    overflow: hidden;
 }
 .h_user > a {
     float: left;
@@ -566,6 +569,7 @@
     color: #111;
     display: block;
     font-size: 14px;
+    margin-bottom: -10px;
 }
 
 .h_user div span {

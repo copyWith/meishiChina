@@ -15,19 +15,19 @@ window.onload=function(){
         };
     }
 
-    var hMain=document.querySelector('.k_xik');
-    var mainUl=hMain.querySelectorAll('.k_xik li');
-    var navLi=document.querySelectorAll('.nav_wrap a');
-    for(var i=0;i<navLi.length;i++){
-        navLi[i].index = i;
-        navLi[i].onclick= function () {
-            for(var i=0;i<navLi.length;i++){
-                navLi[i].className='';
-                mainUl[i].style.display='none';
-            }
-            this.className='y_on';
-            mainUl[this.index].style.display="block";
-        }
-    }
+    //var hMain=document.querySelector('.k_xik');
+    //var mainUl=hMain.querySelectorAll('.k_xik li');
+    //var navLi=document.querySelectorAll('.nav_wrap a');
+    //for(var i=0;i<navLi.length;i++){
+    //    navLi[i].index = i;
+    //    navLi[i].onclick= function () {
+    //        for(var i=0;i<navLi.length;i++){
+    //            navLi[i].className='';
+    //            mainUl[i].style.display='none';
+    //        }
+    //        this.className='y_on';
+    //        mainUl[this.index].style.display="block";
+    //    }
+    //}
 
 };

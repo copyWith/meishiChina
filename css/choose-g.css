@@ -206,14 +206,17 @@ h6>a{
     float: left;
     width:990px;
     height:250px;
-    display: flex;
-    justify-content: space-between;
     margin-right: 44px;
 }
 .m_lun>ul>li>div {
     width: 300px;
     position: relative;
     overflow: hidden;
+    float: left;
+    margin-right: 45px;
+}
+.m_lun>ul>li>.m_lun_la{
+    margin-right: 0;
 }
 .m_cover{
     width:300px;
